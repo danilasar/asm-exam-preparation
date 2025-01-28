@@ -21,6 +21,9 @@ bin: check
 	$(eval QEMU_NEEDLE=true)
 	nasm -f bin $(FILE) -o $(OUT_FILE)
 
+dos: check
+	@dosbox -c $$'mount C: .\nC:\nmake $(NAME)'
+
 
 run:
 	@if [ "$(QEMU_NEEDLE)" = true ]; then \
