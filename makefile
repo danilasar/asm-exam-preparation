@@ -24,7 +24,7 @@ bin: check
 dos: check
 	cp $(FILE) ./build.asm
 	@dosbox -c $$'mount C: .\nC:\nmake build'
-	rm build.asm *.obj *.OBJ *.map *.MAP *.exe *.EXE
+	rm build.asm *.obj *.OBJ *.map *.MAP *.EXE
 
 
 run:
