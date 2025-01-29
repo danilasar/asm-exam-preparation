@@ -22,7 +22,9 @@ bin: check
 	nasm -f bin $(FILE) -o $(OUT_FILE)
 
 dos: check
-	@dosbox -c $$'mount C: .\nC:\nmake $(NAME)'
+	cp $(FILE) ./build.asm
+	@dosbox -c $$'mount C: .\nC:\nmake build'
+	rm build.asm *.obj *.OBJ *.map *.MAP *.exe *.EXE
 
 
 run:
